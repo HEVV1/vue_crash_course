@@ -3,10 +3,11 @@
     <form @submit.prevent>
       <h4>Post Creating</h4>
       <div class="form-group">
-        <my-input v-model="post.title" type="text" name="post_name" id="post_name" placeholder="Post Name"/>
+        <my-input v-model="this.post.title" type="text" name="post_name" id="post_name" placeholder="Post Name"/>
       </div>
       <div class="form-group">
-        <my-input v-model="post.body" type="text" name="post_description" id="post_description" placeholder="Post Description"/>
+        <my-input v-model="this.post.body" type="text" name="post_description" id="post_description"
+                  placeholder="Post Description"/>
       </div>
       <my-button @click="createPost">Add Post</my-button>
     </form>
@@ -33,7 +34,7 @@ export default {
       this.post = {
         title: '',
         body: ''
-      }
+      };
     }
   }
 };

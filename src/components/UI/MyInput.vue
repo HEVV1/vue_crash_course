@@ -1,25 +1,23 @@
 <template>
-  <div class="form-group">
-    <input :value="modelValue" @input="updateInput" class="form-control" type="text" name="" id="">
-  </div>
+  <input :value="modelValue" @input="updateInput" class="form-control" type="text" name="" id="">
 </template>
 
 <script>
 export default {
   name: 'my-input',
-  props:{
-    modelValue:[String, Number]
+  props: {
+    modelValue: [String, Number]
   },
   methods: {
-    updateInput(e){
-      this.$emit('update:modelValue', e.target.value)
+    updateInput(e) {
+      this.$emit('update:modelValue', e.target.value);
     }
   }
 };
 </script>
 
 <style scoped>
-.form-group .form-control {
+.form-control {
   width: 100%;
   height: 2rem;
   margin-bottom: 1rem;

@@ -8,7 +8,7 @@
       <strong>Topic: </strong> {{ post.body }}
     </div>
     <div class="wrapper-buttons">
-      <my-button>Delete</my-button>
+      <my-button @click="$emit('remove', post)">Delete</my-button>
     </div>
   </div>
 </template>
