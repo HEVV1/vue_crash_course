@@ -4,6 +4,8 @@
     <div class="navbar__btns">
       <my-button @click="$router.push('/posts')">Posts</my-button>
       <my-button @click="$router.push('/scroll')">Scroll</my-button>
+      <my-button @click="$router.push('/postsvuex')">Store</my-button>
+      <my-button @click="$router.push('/composition')">API</my-button>
     </div>
   </div>
 </template>

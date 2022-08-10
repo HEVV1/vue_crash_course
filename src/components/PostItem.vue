@@ -8,6 +8,7 @@
       <strong>Topic: </strong> {{ post.body }}
     </div>
     <div class="wrapper-buttons">
+      <my-button @click="$router.push(`/posts/${post.id}`)">Open</my-button>
       <my-button @click="$emit('remove', post)">Delete</my-button>
     </div>
   </div>
@@ -30,5 +31,8 @@ export default {
   border: .1rem solid black;
   margin-bottom: 2rem;
   padding: 1rem;
+}
+.wrapper-buttons{
+  display: flex;
 }
 </style>

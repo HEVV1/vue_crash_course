@@ -2,7 +2,7 @@
   <div class="wrapper-page">
     <h1>Page with posts</h1>
     <div class="form-group">
-      <my-input placeholder="Search" v-model="searchQuery"/>
+      <my-input placeholder="Search" v-focus v-model="searchQuery"/>
     </div>
     <my-button @click="showDialog">Create post</my-button>
     <my-select v-model="selectedSort" :options="this.sortOption"></my-select>
@@ -13,15 +13,13 @@
 
     <post-list v-if="!isPostLoading" @remove="removePost" :posts="sortedAndSearchedPosts"/>
     <div v-else>Loading...</div>
+
     <div class="page__wrapper">
       <div v-for="objPage in this.totalPages"
            class="page"
            :class="{'current__page': this.page === objPage}"
            :key="objPage"
            @click="changePage(objPage)">
-
-
-
         {{ objPage }}
       </div>
     </div>
